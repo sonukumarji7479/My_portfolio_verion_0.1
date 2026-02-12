@@ -2032,6 +2032,7 @@ footer p {
   position: relative;
   z-index: 5;
 }
+
 /* --- Typing Animation --- */
 .typing-text {
   color: var(--secondary-color);
@@ -2039,16 +2040,23 @@ footer p {
   position: relative;
 }
 
-.typing-text::after {
+/* Cursor effect for the active typing element */
+.typing-active::after {
   content: '|';
-  position: absolute;
-  right: -8px;
+  display: inline-block;
+  margin-left: 4px;
   color: var(--accent-color);
   animation: blink 0.7s infinite;
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
 
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}

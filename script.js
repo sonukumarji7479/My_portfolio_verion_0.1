@@ -238,42 +238,81 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Error in contact form script:", error);
   }
 
-  /* --- Typing Animation Logic --- */
-  const typingTextElement = document.querySelector(".typing-text");
-  const words = ["Full Stack Web Developer", "Python Developer", "UI/UX Designer", "Software Engineer"];
-  let wordIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  let typeSpeed = 100;
+  /* --- Advanced Sequential Typing Animation --- */
+  const h1Element = document.querySelector(".type-h1");
+  const h2Element = document.querySelector(".type-h2");
+  const subtitleElement = document.querySelector(".typing-text");
 
-  function type() {
-    if (wordIndex < words.length) {
-      const currentWord = words[wordIndex];
+  // Texts to type
+  const h1Text = "Hi, I'm";
+  const h2Text = "SONU KUMAR";
+  const subtitleWords = ["Full Stack Web Developer", "Python Developer", "UI/UX Designer", "Software Engineer"];
 
-      if (isDeleting) {
-        typingTextElement.textContent = currentWord.substring(0, charIndex - 1);
-        charIndex--;
-        typeSpeed = 50;
-      } else {
-        typingTextElement.textContent = currentWord.substring(0, charIndex + 1);
-        charIndex++;
-        typeSpeed = 100;
+  // Helper function to type text into an element
+  function typeString(element, text, speed = 100) {
+    return new Promise((resolve) => {
+      let i = 0;
+      element.classList.add("typing-active"); // Show cursor
+      element.textContent = "";
+
+      function typing() {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+          setTimeout(typing, speed);
+        } else {
+          element.classList.remove("typing-active"); // Hide cursor when done
+          resolve();
+        }
+      }
+      typing();
+    });
+  }
+
+  // Infinite loop for subtitle
+  async function loopSubtitle() {
+    let wordIndex = 0;
+
+    while (true) {
+      const currentWord = subtitleWords[wordIndex];
+      subtitleElement.classList.add("typing-active");
+
+      // Type
+      for (let i = 0; i <= currentWord.length; i++) {
+        subtitleElement.textContent = currentWord.substring(0, i);
+        // await new Promise(r => setTimeout(r, 100)); // Standard speed
+        await new Promise(r => setTimeout(r, 100));
       }
 
-      if (!isDeleting && charIndex === currentWord.length) {
-        isDeleting = true;
-        typeSpeed = 2000;
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        typeSpeed = 500;
+      await new Promise(r => setTimeout(r, 2000)); // Pause at end
+
+      // Delete
+      for (let i = currentWord.length; i >= 0; i--) {
+        subtitleElement.textContent = currentWord.substring(0, i);
+        await new Promise(r => setTimeout(r, 50));
       }
+
+      subtitleElement.classList.remove("typing-active");
+      wordIndex = (wordIndex + 1) % subtitleWords.length;
+      await new Promise(r => setTimeout(r, 500)); // Pause before next word
     }
-    setTimeout(type, typeSpeed);
   }
 
-  if (typingTextElement) {
-    type();
+  // Master Sequence
+  async function startTypingSequence() {
+    if (h1Element && h2Element && subtitleElement) {
+      // 1. Type "Hi, I'm"
+      await typeString(h1Element, h1Text, 100);
+
+      // 2. Type "SONU KUMAR"
+      await typeString(h2Element, h2Text, 150);
+
+      // 3. Start Subtitle Loop
+      loopSubtitle();
+    }
   }
+
+  // Start the animation
+  startTypingSequence();
 });
 
