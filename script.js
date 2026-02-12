@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Texts to type
   const h1Text = "Hi, I'm";
   const h2Text = "SONU KUMAR";
-  const subtitleWords = ["Full Stack Web Developer", "Python Developer", "UI/UX Designer", "Software Engineer"];
+  const subtitleWords = ["Full Stack Web Developer"];
 
   // Helper function to type text into an element
   // Helper function to type text into an element with variable speed
@@ -279,33 +279,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Infinite loop for subtitle with variable speed
+  // Subtitle logic (modified for single static word)
   async function loopSubtitle() {
-    let wordIndex = 0;
+    const currentWord = subtitleWords[0];
+    subtitleElement.classList.add("typing-active");
 
-    while (true) {
-      const currentWord = subtitleWords[wordIndex];
-      subtitleElement.classList.add("typing-active");
-
-      // Type
-      for (let i = 0; i <= currentWord.length; i++) {
-        subtitleElement.textContent = currentWord.substring(0, i);
-        // Random typing speed for subtitle
-        await new Promise(r => setTimeout(r, Math.random() * 100 + 50));
-      }
-
-      await new Promise(r => setTimeout(r, 2000)); // Pause at end
-
-      // Delete (faster and more consistent)
-      for (let i = currentWord.length; i >= 0; i--) {
-        subtitleElement.textContent = currentWord.substring(0, i);
-        await new Promise(r => setTimeout(r, 30));
-      }
-
-      subtitleElement.classList.remove("typing-active");
-      wordIndex = (wordIndex + 1) % subtitleWords.length;
-      await new Promise(r => setTimeout(r, 500));
+    // Type
+    for (let i = 0; i <= currentWord.length; i++) {
+      subtitleElement.textContent = currentWord.substring(0, i);
+      // Random typing speed for subtitle
+      await new Promise(r => setTimeout(r, Math.random() * 100 + 50));
     }
+
+    // Stop here. Keep cursor blinking (typing-active class remains).
   }
 
   // Master Sequence
