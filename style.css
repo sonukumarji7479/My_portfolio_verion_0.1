@@ -465,7 +465,7 @@ section {
   line-height: 0.9;
   color: #ffffff;
   text-align: left;
-  letter-spacing: -0.05em;
+  letter-spacing: 0.1em;
   font-weight: 900;
 }
 
@@ -2060,6 +2060,7 @@ footer p {
     opacity: 0;
   }
 }
+
 /* --- Lenis Smooth Scroll Recommended CSS --- */
 html.lenis {
   height: auto;
@@ -2080,4 +2081,3 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
-
