@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — S o n u K u m a r | Python Full Stack Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Boldonse&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.51/build/spline-viewer.js"></script>
+</head>
+
+<body>
+  <canvas id="starCanvas"></canvas>
+
+  <header class="navbar">
+    <div class="nav-left">
+      <h1 class="logo">Portfo<span>lio</span></h1>
+    </div>
+
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#Experience">Experience</a></li>
+        <li><a href="#Certifications">Certifications</a></li>
+        <li><a href="#Education">Education</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Company">Company</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+      <a href="#Contact" class="button-start hero-hire-btn">Contact Me</a>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="Home">
+      <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+        <h1>Hi, I'm</h1>
+        <h2><span class="highlight">SONU<BR><BR> KUMAR</span></h2>
+        <p class="subtitle">Full Stack Web Developer</p>
+        <div class="hero-actions">
+          <a href="#Contact" class="button-primary">Contact Me</a>
+          <a href="https://wa.me/7479449597" target="_blank" class="button-secondary whatsapp-btn"
+            title="WhatsApp: 7479449597">
+            <i class="fab fa-whatsapp"></i> Chat Now
+          </a>
+        </div>
+
+      </div>
+
+      <div class="model-wrap hero-model" data-aos="fade-left" data-aos-duration="1000">
+        <spline-viewer url="https://prod.spline.design/a3N9tngVkyCmMGG2/scene.splinecode" loading-mode="eager" no-scroll
+          no-watermark logo="false" events="none"></spline-viewer>
+      </div>
+    </section>
+
+
+    <section class="about" id="About">
+      <h2 class="section-title" data-aos="fade-up">About <span>Me</span></h2>
+      <div class="container glass-card">
+        <div class="about-flex glass-box-about">
+          <div class="model-wrap about-model" data-aos="zoom-in-right" data-aos-duration="1000">
+            <img src="image/profile.pic.png" alt="Sonu Kumar Profile Picture" class="profile-img" />
+          </div>
+          <div class="about-content" data-aos="fade-up" data-aos-duration="1200">
+            <h3>Python Full Stack Web Developer!</h3>
+            <p>
+              Hi, I am Sonu. I is a passionate Python Full Stack Web Developer
+              with a strong foundation in both frontend and backend
+              technologies. I specialize in building dynamic, responsive, and
+              user-friendly web applications using Python frameworks like Django
+              and Flask, along with frontend technologies such as HTML, CSS,
+              JavaScript, and modern libraries like React. I have hands-on
+              experience in designing RESTful APIs, integrating databases like
+              MySQL and MongoDB, and deploying applications to cloud platforms.
+              I enjoy solving complex problems, optimizing web performance, and
+              continuously learning new technologies to deliver efficient and
+              scalable web solutions. My goal is to create innovative web
+              applications that provide excellent user experiences while
+              leveraging the power of Python and full stack development.
+            </p>
+
+            <div class="about-details about-details-row">
+              <p><span>Name:</span> Sonu Kumar</p>
+              <p><span>Age:</span> 22</p>
+              <p><span>Email:</span> sonu9303343@gmail.com</p>
+              <p><span>From:</span> India</p>
+            </div>
+
+            <div class="about-buttons-row">
+              <div class="audio-control-container">
+                <audio id="audio">
+                  <source src="image/aboutme.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+                <button class="play-btn" id="btn" aria-label="Play/Pause Audio">
+                  <div class="icon" id="icon"></div>
+                  <span class="audio-text">Read About Me</span>
+                </button>
+              </div>
+              <a href="image/resume_sonukumar.pdf" download="resume_sonukumar.pdf"
+                class="button-primary download-cv">Download Resume</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="Skills">
+      <h2 class="section-title" data-aos="fade-up">My <span>Skills</span></h2>
+      <div class="container glass-card">
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+            <img src="image/translator_3068550.png" alt="Languages Icon" class="skill-icon" />
+            <h3>Languages</h3>
+            <p>Python, Java, C, JavaScript</p>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+            <img src="image/web_14085099.png" alt="Frontend Icon" class="skill-icon" />
+            <h3>Frontend</h3>
+            <p>HTML5, CSS3, JavaScript, React, Tailwind CSS</p>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+            <img src="image/browser_12223008.png" alt="Backend Icon" class="skill-icon" />
+            <h3>Backend</h3>
+            <p>Python (Django, Flask, FastAPI), Java (Spring Boot)</p>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+            <img src="image/database_9415205.png" alt="Database Icon" class="skill-icon" />
+            <h3>Database</h3>
+            <p>MySQL, PostgreSQL, MongoDB</p>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
+            <img src="image/tool_11523847.png" alt="Tools & Tech Icon" class="skill-icon" />
+            <h3>Tools & Tech</h3>
+            <p>Git, GitHub, JWT Auth, Razorpay, Docker</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="Experience">
+      <h2 class="section-title" data-aos="fade-up">Work <span>Experience</span></h2>
+      <div class="container glass-card">
+        <div class="experience-container">
+          <div class="experience-card" data-aos="fade-up">
+            <div class="exp-header">
+              <h4>Java Full Stack Development Intern</h4>
+              <span class="exp-date">Jan 2026 - Jun 2026</span>
+            </div>
+            <p class="company">Tap Academy</p>
+            <ul class="exp-list">
+              <li>Developed full-stack applications using Java, Spring Boot, Hibernate, MySQL, React, HTML, CSS, and
+                JavaScript.</li>
+              <li>Built REST APIs, authentication modules, and integrated MySQL relational databases.</li>
+              <li>Contributed to CRUD modules, dashboards, and deployment for production-level systems.</li>
+              <li>Improved UI/UX and implemented performance-focused optimizations.</li>
+            </ul>
+          </div>
+
+          <div class="experience-card" data-aos="fade-up">
+            <div class="exp-header">
+              <h4>Full Stack Developer Trainee</h4>
+              <span class="exp-date">March 2025 - August 2025</span>
+            </div>
+            <p class="company">mysirG.com</p>
+            <ul class="exp-list">
+              <li>Gained hands-on experience in <strong>Python Full Stack Development</strong>, covering <strong>Python,
+                  HTML, CSS, JavaScript, React, Node.js, and Django</strong>.</li>
+              <li>Developed responsive UIs, REST APIs, and fully functional full-stack applications with
+                industry-standard workflows.</li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="certifications" id="Certifications">
+      <h2 class="section-title" data-aos="fade-up">My <span>Certifications</span></h2>
+      <div class="container glass-card">
+        <div class="cert-grid">
+          <div class="cert-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="cert-icon">
+              <img src="image/trophy.png" alt="Trophy Icon" class="cert-img-icon">
+            </div>
+            <h4>Java Full Stack Development</h4>
+            <p>Issued by: [Tap Academy]</p>
+            <a href="#" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+          </div>
+
+          <div class="cert-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="cert-icon">
+              <img src="image/trophy.png" alt="Trophy Icon" class="cert-img-icon">
+            </div>
+            <h4>Python Full Stack Development</h4>
+            <p>Issued by: mysirG.com</p>
+            <a href="image/python_full_stack_certificate.pdf" target="_blank" class="cert-link">View Certificate <i
+                class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="education" id="Education">
+      <h2 class="section-title" data-aos="fade-up">
+        My <span>Journey</span>
+      </h2>
+      <div class="container glass-card">
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Aug 2022 - May 2026</div>
+            <div class="timeline-content">
+              <h4>B.E in Electronics & Communication Engineering</h4>
+              <p>
+                JCT College of Engineering and Technology, Tamil Nadu | CGPA:
+                8.19
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Jul 2020 - May 2021</div>
+            <div class="timeline-content">
+              <h4>Senior Secondary (12th)</h4>
+              <p>
+                Gandhi Smarak Vidhya Mandir Sah Enter College, Pachrukhi |
+                Percentage: 57%
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="400">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Jul 2018 - May 2019</div>
+            <div class="timeline-content">
+              <h4>Secondary (10th)</h4>
+              <p>
+                Gandhi Smarak Vidhya Mandir Sah Enter College, Pachrukhi |
+                Percentage: 60%
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="Projects">
+      <h2 class="section-title" data-aos="fade-up">
+        Latest <span>Projects</span>
+      </h2>
+      <div class="container glass-card">
+        <div class="projects-grid">
+          <div class="project-card" data-aos="flip-up" data-aos-delay="100">
+            <div class="project-image-wrap">
+              <img src="image/dairy_projects.png" alt="E-commerce Platform Screenshot" />
+            </div>
+            <h4>E-commerce Platform (Dairy Farm)</h4>
+            <p>
+              Full-stack site using Django and React. Features secure payments
+              and inventory management.
+            </p>
+            <a href="https://swamiswaddairyfarm.netlify.app/" target="_blank" class="project-link">View Project <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="project-card" data-aos="flip-up" data-aos-delay="200">
+            <div class="project-image-wrap">
+              <img src="image/chartbot.png" alt="Real-Time Chat App Screenshot" />
+            </div>
+            <h4>Real-Time Chat App</h4>
+            <p>
+              Built with Python/Node.js and WebSockets for instant messaging.
+              High performance and scalability.
+            </p>
+            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="project-card" data-aos="flip-up" data-aos-delay="300">
+            <div class="project-image-wrap">
+              <img src="image/portfolio (2).png" alt="Portfolio Website Screenshot" />
+            </div>
+            <h4>Portfolio Website</h4>
+            <p>
+              A responsive personal site showcasing skills and projects.
+              (Meta-project!)
+            </p>
+            <a href="https://sonuportfolioooo.netlify.app/" target="_blank" class="project-link">View Project <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-creation" id="ContentCreation">
+      <h2 class="section-title" data-aos="fade-up">
+        My Content <span>Creation</span>
+      </h2>
+      <div class="container glass-card">
+        <div class="content-grid">
+          <div class="video-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="video-wrap">
+              <a href="https://youtu.be/TXBgV5e9hOg" target="_blank" class="video-link">
+                <img src="https://img.youtube.com/vi/TXBgV5e9hOg/maxresdefault.jpg" alt="Video Thumbnail 1"
+                  class="video-thumb" />
+                <div class="play-overlay"><i class="fas fa-play"></i></div>
+              </a>
+            </div>
+            <h4>Video Editing Course #1</h4>
+          </div>
+
+          <div class="video-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="video-wrap">
+              <a href="https://youtu.be/uVuXImQSPVI" target="_blank" class="video-link">
+                <img src="https://img.youtube.com/vi/uVuXImQSPVI/maxresdefault.jpg" alt="Video Thumbnail 2"
+                  class="video-thumb" />
+                <div class="play-overlay"><i class="fas fa-play"></i></div>
+              </a>
+            </div>
+            <h4>Video Editing Course #2</h4>
+          </div>
+
+          <div class="video-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="video-wrap">
+              <a href="https://youtu.be/C6EylFuYIMw" target="_blank" class="video-link">
+                <img src="https://img.youtube.com/vi/C6EylFuYIMw/maxresdefault.jpg" alt="Video Thumbnail 3"
+                  class="video-thumb" />
+                <div class="play-overlay"><i class="fas fa-play"></i></div>
+              </a>
+            </div>
+            <h4>Video Editing Course #3</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="company-section-marquee" id="Company">
+      <h2 class="section-title" data-aos="fade-up">Proudly <span>Associated With</span></h2>
+      <div class="marquee-wrapper">
+        <div class="marquee-content">
+          <!-- First set of 5 images with reviews -->
+          <!-- First set of 5 images with reviews -->
+
+          <div class="marquee-item">
+            <img src="image/product (2).jpeg" alt="Product Review 2" class="marquee-img">
+            <div class="marquee-overlay">
+              <p>“Since we started using Swami Swad milk, we feel the quality is more natural.”</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="image/product (4).jpeg" alt="Product Review 3" class="marquee-img">
+            <div class="marquee-overlay">
+              <p>“No strange smell or watery taste, it feels fresh and clean.”</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="image/product (5).jpeg" alt="Product Review 4" class="marquee-img">
+            <div class="marquee-overlay">
+              <p>“Curd is thick and sets naturally, which shows good milk quality.”</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="image/product1 (1).jpeg" alt="Product Review 5" class="marquee-img">
+            <div class="marquee-overlay">
+              <p>“I trust this brand because it feels unadulterated and healthy.”</p>
+            </div>
+          </div>
+
+          <!-- Duplicate set for seamless scrolling -->
+          <!-- Duplicate set for seamless scrolling -->
+
+          <div class="marquee-item">
+            <img src="image/product (2).jpeg" alt="Product Review 2" class="marquee-img">
+            <div class="marquee-overlay">
+              <p>“Since we started using Swami Swad milk, we feel the quality is more natural.”</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="image/product (4).jpeg" alt="Product Review 3" class="marquee-img">
+            <div class="marquee-overlay">
+              <p>“No strange smell or watery taste, it feels fresh and clean.”</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="image/product (5).jpeg" alt="Product Review 4" class="marquee-img">
+            <div class="marquee-overlay">
+              <p>“Curd is thick and sets naturally, which shows good milk quality.”</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="image/product1 (1).jpeg" alt="Product Review 5" class="marquee-img">
+            <div class="marquee-overlay">
+              <p>“I trust this brand because it feels unadulterated and healthy.”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="company-cta">
+        <a href="https://sonuportfolioooo.netlify.app/" target="_blank" class="button-primary">
+          Visit Website <i class="fas fa-external-link-alt" style="margin-left: 8px;"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="contact" id="Contact">
+      <h2 class="section-title" data-aos="fade-up">
+        Contact <span>Me</span>
+      </h2>
+      <div class="container glass-card">
+        <div class="contact-wrap" data-aos="fade-up" data-aos-duration="1000">
+          <div class="contact-form-container">
+            <h3>Send Me A Message 👋</h3>
+            <form id="contactForm" class="contact-form">
+              <input type="text" id="name" name="name" placeholder="Your Name" required />
+              <input type="email" id="email" name="email" placeholder="Your Email" required />
+              <textarea id="message" name="message" placeholder="Your Message" required>Hi Sonu,
+
+I'd like to discuss...</textarea>
+              <button type="submit" class="button-primary">Send Message</button>
+            </form>
+          </div>
+
+          <div class="contact-info-container">
+            <h3>Get In Touch</h3>
+            <div class="contact-info-detail">
+              <p>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Location:</span> Siwan Bihar,India
+              </p>
+              <p>
+                <i class="fas fa-envelope"></i>
+                <span>Email:</span> sonu9303343@gmail.com
+              </p>
+              <p>
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp:</span>
+                <a href="https://wa.me/917479449597" target="_blank">
+                  +91 7479449597
+                </a>
+              </p>
+            </div>
+            <div class="social-links-title">Connect with me</div>
+            <div class="social-links">
+              <a href="https://github.com/sonukumarji7479" target="_blank" title="GitHub">
+                <img src="image/github_733553.png" alt="GitHub Icon" class="social-icon" />
+              </a>
+              <a href="https://www.linkedin.com/in/sonu-kumar-5b4753280" target="_blank" title="LinkedIn">
+                <img src="image/linkedin_174857.png" alt="LinkedIn Icon" class="social-icon" />
+              </a>
+              <a href="https://x.com/" target="_blank" title="X (Twitter)">
+                <img src="image/twitter_5968830.png" alt="Twitter Icon" class="social-icon" />
+              </a>
+              <a href="https://www.instagram.com/mr_sonu__0073?igsh=c2diOHdtajF4Ync4" target="_blank" title="Instagram">
+                <img src="image/social_15527687.png" alt="Instagram Icon" class="social-icon" />
+              </a>
+              <a href="https://www.youtube.com/channel/UCc1-1yV9uLieezOky-zGEJg" target="_blank" title="YouTube">
+                <img src="image/youtube_4423702.png" alt="YouTube Icon" class="social-icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="#Home">Home</a> | <a href="#About">About</a> |
+        <a href="#Skills">Skills</a> | <a href="#Projects">Projects</a> |
+        <a href="#ContentCreation">Content</a> |
+        <a href="#Contact">Contact</a>
+      </div>
+      <p>
+        &copy; 2025 Sonu Kumar. All Rights Reserved. | Designed with
+        <i class="fas fa-heart" style="color: var(--primary-color)"></i>
+      </p>
+    </div>
+  </footer>
+
+  <div id="birdOverlay">
+    <model-viewer id="flyingBirdModel" src="image/3d.bird.glb" camera-controls interaction-prompt="none"
+      alt="Flying Bird 3D Model" disable-zoom auto-rotate autoplay animation-name="Fly" shadow-intensity="0"
+      shadow-softness="0.5" exposure="1.2">
+    </model-viewer>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS (Animation on Scroll)
+    AOS.init({
+      once: true,
+      duration: 800,
+    });
+  </script>
+
+</body>
+
+</html>
