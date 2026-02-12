@@ -237,5 +237,43 @@ document.addEventListener("DOMContentLoaded", () => {
   } catch (error) {
     console.error("Error in contact form script:", error);
   }
+
+  /* --- Typing Animation Logic --- */
+  const typingTextElement = document.querySelector(".typing-text");
+  const words = ["Full Stack Web Developer", "Python Developer", "UI/UX Designer", "Software Engineer"];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typeSpeed = 100;
+
+  function type() {
+    if (wordIndex < words.length) {
+      const currentWord = words[wordIndex];
+
+      if (isDeleting) {
+        typingTextElement.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 50;
+      } else {
+        typingTextElement.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 100;
+      }
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        isDeleting = true;
+        typeSpeed = 2000;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        typeSpeed = 500;
+      }
+    }
+    setTimeout(type, typeSpeed);
+  }
+
+  if (typingTextElement) {
+    type();
+  }
 });
 

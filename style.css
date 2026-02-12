@@ -2032,3 +2032,23 @@ footer p {
   position: relative;
   z-index: 5;
 }
+/* --- Typing Animation --- */
+.typing-text {
+  color: var(--secondary-color);
+  font-weight: 600;
+  position: relative;
+}
+
+.typing-text::after {
+  content: '|';
+  position: absolute;
+  right: -8px;
+  color: var(--accent-color);
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
