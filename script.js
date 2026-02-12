@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /* --- Lenis Smooth Scroll --- */
+  const lenis = new Lenis();
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
   /* -----------------------------------------------
    * HIGH-PERFORMANCE CANVAS STARFIELD & NEBULA
    * ----------------------------------------------- */
@@ -249,19 +256,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const subtitleWords = ["Full Stack Web Developer", "Python Developer", "UI/UX Designer", "Software Engineer"];
 
   // Helper function to type text into an element
-  function typeString(element, text, speed = 100) {
+  // Helper function to type text into an element with variable speed
+  function typeString(element, text, minSpeed = 50, maxSpeed = 150) {
     return new Promise((resolve) => {
       let i = 0;
-      element.classList.add("typing-active"); // Show cursor
+      element.classList.add("typing-active");
       element.textContent = "";
 
       function typing() {
         if (i < text.length) {
           element.textContent += text.charAt(i);
           i++;
-          setTimeout(typing, speed);
+          // Random delay for natural typing feel
+          const randomDelay = Math.random() * (maxSpeed - minSpeed) + minSpeed;
+          setTimeout(typing, randomDelay);
         } else {
-          element.classList.remove("typing-active"); // Hide cursor when done
+          element.classList.remove("typing-active");
           resolve();
         }
       }
@@ -269,7 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Infinite loop for subtitle
+  // Infinite loop for subtitle with variable speed
   async function loopSubtitle() {
     let wordIndex = 0;
 
@@ -280,21 +290,21 @@ document.addEventListener("DOMContentLoaded", () => {
       // Type
       for (let i = 0; i <= currentWord.length; i++) {
         subtitleElement.textContent = currentWord.substring(0, i);
-        // await new Promise(r => setTimeout(r, 100)); // Standard speed
-        await new Promise(r => setTimeout(r, 100));
+        // Random typing speed for subtitle
+        await new Promise(r => setTimeout(r, Math.random() * 100 + 50));
       }
 
       await new Promise(r => setTimeout(r, 2000)); // Pause at end
 
-      // Delete
+      // Delete (faster and more consistent)
       for (let i = currentWord.length; i >= 0; i--) {
         subtitleElement.textContent = currentWord.substring(0, i);
-        await new Promise(r => setTimeout(r, 50));
+        await new Promise(r => setTimeout(r, 30));
       }
 
       subtitleElement.classList.remove("typing-active");
       wordIndex = (wordIndex + 1) % subtitleWords.length;
-      await new Promise(r => setTimeout(r, 500)); // Pause before next word
+      await new Promise(r => setTimeout(r, 500));
     }
   }
 
@@ -302,10 +312,10 @@ document.addEventListener("DOMContentLoaded", () => {
   async function startTypingSequence() {
     if (h1Element && h2Element && subtitleElement) {
       // 1. Type "Hi, I'm"
-      await typeString(h1Element, h1Text, 100);
+      await typeString(h1Element, h1Text);
 
       // 2. Type "SONU KUMAR"
-      await typeString(h2Element, h2Text, 150);
+      await typeString(h2Element, h2Text);
 
       // 3. Start Subtitle Loop
       loopSubtitle();
