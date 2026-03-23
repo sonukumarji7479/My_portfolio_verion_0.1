@@ -51,7 +51,7 @@
     <section class="hero" id="Home">
       <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
         <h1><span class="type-h1"></span></h1>
-        <h2><span class="highlight"><span class="type-h2"></span></span></h2>
+        <h2><span class="highlight"><span class="type-sonu"></span><br><span class="type-kumar"></span></span></h2>
         <p class="subtitle"><span class="typing-text"></span></p>
         <div class="hero-actions">
           <a href="#Contact" class="button-primary">Contact Me</a>
@@ -71,8 +71,8 @@
 
 
     <section class="about" id="About">
-      <h2 class="section-title" data-aos="fade-up">About <span>Me</span></h2>
-      <div class="container glass-card">
+      <h2 class="section-title" data-aos="fade-left">About <span>Me</span></h2>
+      <div class="container glass-card" data-aos="fade-left">
         <div class="about-flex glass-box-about">
           <div class="model-wrap about-model" data-aos="zoom-in-right" data-aos-duration="1000">
             <img src="image/profile.pic.png" alt="Sonu Kumar Profile Picture" class="profile-img" />
@@ -122,8 +122,8 @@
     </section>
 
     <section class="skills" id="Skills">
-      <h2 class="section-title" data-aos="fade-up">My <span>Skills</span></h2>
-      <div class="container glass-card">
+      <h2 class="section-title" data-aos="fade-right">My <span>Skills</span></h2>
+      <div class="container glass-card" data-aos="fade-right">
         <div class="skills-grid">
           <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
             <img src="image/translator_3068550.png" alt="Languages Icon" class="skill-icon" />
@@ -155,8 +155,8 @@
     </section>
 
     <section class="experience" id="Experience">
-      <h2 class="section-title" data-aos="fade-up">Work <span>Experience</span></h2>
-      <div class="container glass-card">
+      <h2 class="section-title" data-aos="fade-left">Work <span>Experience</span></h2>
+      <div class="container glass-card" data-aos="fade-left">
         <div class="experience-container">
           <div class="experience-card" data-aos="fade-up">
             <div class="exp-header">
@@ -193,8 +193,8 @@
     </section>
 
     <section class="certifications" id="Certifications">
-      <h2 class="section-title" data-aos="fade-up">My <span>Certifications</span></h2>
-      <div class="container glass-card">
+      <h2 class="section-title" data-aos="fade-right">My <span>Certifications</span></h2>
+      <div class="container glass-card" data-aos="fade-right">
         <div class="cert-grid">
           <div class="cert-card" data-aos="zoom-in" data-aos-delay="100">
             <div class="cert-icon">
@@ -219,10 +219,10 @@
     </section>
 
     <section class="education" id="Education">
-      <h2 class="section-title" data-aos="fade-up">
+      <h2 class="section-title" data-aos="fade-left">
         My <span>Journey</span>
       </h2>
-      <div class="container glass-card">
+      <div class="container glass-card" data-aos="fade-left">
         <div class="timeline">
           <div class="timeline-item" data-aos="fade-right">
             <div class="timeline-dot"></div>
@@ -262,10 +262,10 @@
     </section>
 
     <section class="projects" id="Projects">
-      <h2 class="section-title" data-aos="fade-up">
+      <h2 class="section-title" data-aos="fade-right">
         Latest <span>Projects</span>
       </h2>
-      <div class="container glass-card">
+      <div class="container glass-card" data-aos="fade-right">
         <div class="projects-grid">
           <div class="project-card" data-aos="flip-up" data-aos-delay="100">
             <div class="project-image-wrap">
@@ -307,10 +307,10 @@
     </section>
 
     <section class="content-creation" id="ContentCreation">
-      <h2 class="section-title" data-aos="fade-up">
+      <h2 class="section-title" data-aos="fade-left">
         My Content <span>Creation</span>
       </h2>
-      <div class="container glass-card">
+      <div class="container glass-card" data-aos="fade-left">
         <div class="content-grid">
           <div class="video-card" data-aos="zoom-in" data-aos-delay="100">
             <div class="video-wrap">
@@ -349,7 +349,7 @@
     </section>
 
     <section class="company-section-marquee" id="Company">
-      <h2 class="section-title" data-aos="fade-up">Proudly <span>Associated With</span></h2>
+      <h2 class="section-title" data-aos="fade-right">Proudly <span>Associated With</span></h2>
       <div class="marquee-wrapper">
         <div class="marquee-content">
           <!-- First set of 5 images with reviews -->
@@ -411,17 +411,17 @@
       </div>
 
       <div class="company-cta">
-        <a href="https://sonuportfolioooo.netlify.app/" target="_blank" class="button-primary">
+        <a href="https://swamiswaddairyfarm.netlify.app/" target="_blank" class="button-primary">
           Visit Website <i class="fas fa-external-link-alt" style="margin-left: 8px;"></i>
         </a>
       </div>
     </section>
 
     <section class="contact" id="Contact">
-      <h2 class="section-title" data-aos="fade-up">
+      <h2 class="section-title" data-aos="fade-left">
         Contact <span>Me</span>
       </h2>
-      <div class="container glass-card">
+      <div class="container glass-card" data-aos="fade-left">
         <div class="contact-wrap" data-aos="fade-up" data-aos-duration="1000">
           <div class="contact-form-container">
             <h3>Send Me A Message 👋</h3>
@@ -506,7 +506,10 @@ I'd like to discuss...</textarea>
     // Initialize AOS (Animation on Scroll)
     AOS.init({
       once: true,
-      duration: 800,
+      duration: 1000,
+      offset: 100, // Trigger sooner on scroll
+      disable: 'mobile' ? false : false, // Keeping enabled but optimized
+      easing: 'ease-out-back'
     });
   </script>
 
